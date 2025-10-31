@@ -2,7 +2,7 @@ import asyncio
 from typing import Any, Optional
 
 from langchain_chroma import Chroma
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 from langchain_core.documents import Document
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import SystemMessagePromptTemplate, ChatPromptTemplate
@@ -43,11 +43,11 @@ from task.user_client import UserClient
 # required data and then returned back to 1st Service response in JSON format.
 # ---
 # Useful links:
-# Chroma DB: https://python.langchain.com/docs/integrations/vectorstores/chroma/#initialization-from-client
-# Document#id: https://python.langchain.com/api_reference/core/documents/langchain_core.documents.base.Document.html#langchain_core.documents.base.Document.id
-# Chroma DB, async add documents: https://python.langchain.com/api_reference/chroma/vectorstores/langchain_chroma.vectorstores.Chroma.html#langchain_chroma.vectorstores.Chroma.aadd_documents
-# Chroma DB, get all records: https://python.langchain.com/api_reference/chroma/vectorstores/langchain_chroma.vectorstores.Chroma.html#langchain_chroma.vectorstores.Chroma.get
-# Chroma DB, delete records: https://python.langchain.com/api_reference/chroma/vectorstores/langchain_chroma.vectorstores.Chroma.html#langchain_chroma.vectorstores.Chroma.delete
+# Chroma DB: https://docs.langchain.com/oss/python/integrations/vectorstores/index#chroma
+# Document#id: https://docs.langchain.com/oss/python/langchain/knowledge-base#1-documents-and-document-loaders
+# Chroma DB, async add documents: https://api.python.langchain.com/en/latest/vectorstores/langchain_chroma.vectorstores.Chroma.html#langchain_chroma.vectorstores.Chroma.aadd_documents
+# Chroma DB, get all records: https://api.python.langchain.com/en/latest/vectorstores/langchain_chroma.vectorstores.Chroma.html#langchain_chroma.vectorstores.Chroma.get
+# Chroma DB, delete records: https://api.python.langchain.com/en/latest/vectorstores/langchain_chroma.vectorstores.Chroma.html#langchain_chroma.vectorstores.Chroma.delete
 # ---
 # TASK:
 # Implement such application as described on the `flow.png` with adaptive vector based grounding and 'lite' version of

@@ -125,6 +125,8 @@ Combines vector search with structured output and real-time data retrieval.
 
 
 ### User Service
+Swagger UI 👉 http://localhost:8041/docs
+
 The mock user service runs on `localhost:8041` and provides:
 - `/v1/users` - Get all users
 - `/v1/users/{id}` - Get specific user
