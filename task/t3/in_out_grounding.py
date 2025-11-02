@@ -143,7 +143,7 @@ class HobbiesSearchWizard:
         existing_ids = set(vector_data.get("ids", []))
 
         users_from_server = self.user_client.get_all_users()
-        server_ids = {str(user["id"]) for user in users_from_server}  # cast to str to match vectorstore
+        server_ids = {str(user["id"]) for user in users_from_server}
 
         to_delete = list(existing_ids - server_ids)
         to_create = [user for user in users_from_server if str(user["id"]) not in existing_ids]
